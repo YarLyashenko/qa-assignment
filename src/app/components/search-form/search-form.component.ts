@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,12 +9,12 @@ import { Router } from '@angular/router';
 })
 export class SearchFormComponent implements OnInit {
 
-  searchForm: FormGroup;
+  searchForm: UntypedFormGroup;
   defaultSearchType = 'people';
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private router: Router
   ) { }
 
