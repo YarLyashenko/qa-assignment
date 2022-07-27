@@ -102,12 +102,6 @@
           "options": {
             "watch": true,
             "headless": false
-          },
-          "configurations": {
-            "local-dev": {
-              "devServerTarget": "tnt-assignment:serve:development",
-              "baseUrl": "http://localhost:4200"
-            }
           }
         },
         "e2e": {
@@ -147,7 +141,6 @@
           "builder": "<name of builder>:tslint",
           "options": {
             "tsConfig": [
-              "cypress/tsconfig.json",
               "cypress/tsconfig.json"
             ],
             "exclude": [
