@@ -13,12 +13,19 @@
       "node_modules/@types"
     ],
     "lib": [
-     "es2018",
-     "dom",
+      "es2018",
+      "dom"
     ],
-    
+    "baseUrl": ".",
+    "paths": {
+      "core-js/es7/reflect": [
+        "../node_modules/core-js/proposals/reflect-metadata"
+      ],
+      "core-js/es6/*": [
+        "../node_modules/core-js/es/*"
+      ]
+    },
     "noUnusedLocals": true,
     "noUnusedParameters": true
-    
   }
 }
