@@ -1,12 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col">
-
       <h1>The Star Wars Search</h1>
-      <br>
+      <br />
 
       <app-search-form></app-search-form>
-      <br>
+      <br />
 
       <div *ngIf="isLoading">Loading...</div>
 
@@ -16,18 +15,17 @@
         <div *ngIf="searchType === 'people'">
           <div *ngFor="let character of searchResult">
             <app-character [character]="character"></app-character>
-            <br>
+            <br />
           </div>
         </div>
 
         <div *ngIf="searchType === 'planets'">
           <div *ngFor="let planet of searchResult">
             <app-planet [planet]="planet"></app-planet>
-            <br>
+            <br />
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>

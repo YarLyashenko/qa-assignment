@@ -1,4 +1,1 @@
-describe('Simpletest', () => {
-  it('', () => {
-  });
-});
+describe("Simpletest", () => {  it("", () => {});});
