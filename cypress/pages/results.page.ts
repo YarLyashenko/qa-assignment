@@ -1,3 +1,5 @@
+import {SearchPage} from "./search.page";
+
 export class ResultsPage {
     getResults() {
         return cy.get(`#results div.card`);
@@ -8,6 +10,7 @@ export class ResultsPage {
         cy.get(`div#not-found`)
             .should("be.visible")
             .should("have.text", "Not found.");
-        return this;
+
+        return new SearchPage();
     }
 }

@@ -13,7 +13,12 @@ export class SearchPage {
     }
 
     fillQuery(query: string) {
-        cy.get(`input#query`).type(query);
+        this.getQueryField().clear().type(query);
+        return this;
+    }
+
+    clearQuery() {
+        this.getQueryField().clear();
         return this;
     }
 
@@ -27,8 +32,32 @@ export class SearchPage {
         return new PeoplePage();
     }
 
+    searchPeopleByPressingEnter(people: string) {
+        this.clickOnPeople().fillQuery(people + '{enter}');
+        return new PeoplePage();
+    }
+
+    searchPeopleByEmptyString() {
+        this.clickOnPeople().clearQuery().clickSearchButton();
+        return new PeoplePage();
+    }
+
     searchPlanet(planet: string) {
         this.clickOnPlanets().fillQuery(planet).clickSearchButton();
         return new PlanetsPage();
+    }
+
+    searchPlanetByPressingEnter(planet: string) {
+        this.clickOnPlanets().fillQuery(planet + '{enter}');
+        return new PlanetsPage();
+    }
+
+    searchPlanetByEmptyString() {
+        this.clickOnPlanets().clearQuery().clickSearchButton();
+        return new PlanetsPage();
+    }
+
+    private getQueryField() {
+        return cy.get(`input#query`)
     }
 }

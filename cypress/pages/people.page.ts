@@ -1,4 +1,5 @@
 import {ResultsPage} from "./results.page";
+import {SearchPage} from "./search.page";
 
 export class PeoplePage extends ResultsPage {
     compareResultsWithExpected(expectedList: any) {
@@ -16,6 +17,6 @@ export class PeoplePage extends ResultsPage {
                 cy.wrap(item).find("#skin-color-value").should("have.text", expectedList[index].skin_color);
             });
 
-        return this;
+        return new SearchPage();
     }
 }

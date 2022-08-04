@@ -1,4 +1,5 @@
 import {ResultsPage} from "./results.page";
+import {SearchPage} from "./search.page";
 
 export class PlanetsPage extends ResultsPage {
     compareResultsWithExpected(expectedList: any) {
@@ -14,6 +15,6 @@ export class PlanetsPage extends ResultsPage {
                 cy.wrap(item).find("#gravity-value").should("have.text", expectedList[index].gravity);
             });
 
-        return this;
+        return new SearchPage();
     }
 }

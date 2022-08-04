@@ -4,9 +4,11 @@
 
 The assessment information is located in the file: [ASSESSMENT.MD](./ASSESSMENT.MD)
 
+The assessment solution is located in the file: [ASSESSMENT_SOLUTION.MD](./ASSESSMENT_SOLUTION.MD)
+
 # NodeJS version
 
-Currently the project works with **NODEJS 16 LTS** environment. Please make sure you MAC/PC has a 10.x node version installed. (https://nodejs.org/dist/latest-v10.x/). You can also try NODEJS 12 LTS as an experiment but support has not been verified.
+Currently the project works with **NODEJS 16 LTS** environment. 
 
 Run `node -v` in a terminal to see which version of NodeJS you have
 
@@ -47,7 +49,7 @@ So, what you should expect when using this app are the following:
 
 - **NodeJS 16**
 - Chrome browser
-- Tested on Mac OS X
+- Tested on Windows 10
 
 ## Installation
 
