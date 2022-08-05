@@ -31,6 +31,7 @@ ng e2e
  
 
 ## Issues
-- Empty string as a wildcard - search returns all entities.
+- Search by empty input does not clear results. Related tests are failing.
+- Whitespace as a wildcard - search returns all entities.
 - No pagination. Only first 10 results are shown.
 - Cannot retry search without changing input.
